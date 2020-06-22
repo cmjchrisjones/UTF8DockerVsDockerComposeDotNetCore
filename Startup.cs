@@ -31,7 +31,7 @@ namespace DotNetCoreCurrencyInDocker
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             var cultureInfo = new CultureInfo("en-GB");
-            cultureInfo.NumberFormat.CurrencySymbol = "£";
+            cultureInfo.NumberFormat.CurrencySymbol = "Â£";
 
             CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
             CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
