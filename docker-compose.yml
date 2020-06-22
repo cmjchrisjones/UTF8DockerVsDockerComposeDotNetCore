@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  dotnetcorecurrencyindocker:
+    image: ${DOCKER_REGISTRY-}dotnetcorecurrencyindocker
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 36565:80
+      - 36566:443

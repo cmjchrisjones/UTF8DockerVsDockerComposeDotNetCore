@@ -1,0 +1,18 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+    <div class="text-center">
+        <p>&pound; British Sterling</p>
+        <p>&euro; Euro</p>
+        <p>UK: @Model.CurrencyUK</p>
+        <p>UK2: @Model.CurrencyUK2</p>
+        <p>Culture: @Model.Culture</p>
+
+        @foreach(System.Collections.DictionaryEntry ev in Environment.GetEnvironmentVariables())
+        {
+            <p>@ev.Key : @ev.Value</p>
+        }
+    </div>
